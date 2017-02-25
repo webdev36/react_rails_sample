@@ -1,0 +1,224 @@
+.event-index-flex{
+  display: flex;
+}
+
+.coming-events-flex{
+  display: flex;
+  flex-direction: column;
+}
+.past-events-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px){
+  .event-list-wrap{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }   
+}
+
+
+.event-item-wrap{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-basis: 98%;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 15px;
+  justify-content: flex-start;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #545454;
+  &:hover{
+    background: #fafafa;
+    text-decoration: none;
+  }
+}
+
+.subscribers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.img-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-right: 10px;
+}
+
+.event-info{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding-top: 0px;
+  justify-content: space-around;
+  height: 100%;
+    a > h3.title{
+      margin-top: 0px;
+      color: #545454;
+      font-weight: bold;
+      &:hover{
+        color: $primary-color;
+        text-decoration: none;
+      }
+    .user{
+      font-family: "Lato", sans-serif;
+    }
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+    a > h3.title{
+      margin-top: 0px;
+      color: #545454;
+      font-weight: bold;
+      font-size: 15px;
+      &:hover{
+        color: $primary-color;
+        text-decoration: none;
+      }
+}
+}
+
+
+.event-item-wrap .event-reminder-switch{
+  margin-top: 10px;
+}
+
+.show-flex{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 2px 30px 50px 30px; 
+  background: url("https://i.imgur.com/FsQ0Zgy.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #545454;
+  background-size: cover;
+  color: #fff;
+  .title-and-image-show{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    .caption{
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .countdown-show{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+  }
+  .sub-btn-show{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+  }
+  .sub-size-show{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+    p{
+      text-align:center;
+    }
+  }
+}
+
+#countdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+}
+
+//iphone
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+  #countdown{
+display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+    zoom: 0.5;
+    -moz-transform: scale(0.5); 
+
+  }
+}
+
+//ipad
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  #countdown{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px; 
+    zoom: 0.8;
+    -moz-transform: scale(0.8); 
+
+  }
+
+}
+
+#visit-btn{
+  color: $primary-color;
+  border: 1px solid #fff;
+  background: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.user-item-wrap{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-basis: 32%;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #dedede;
+  color: #545454;
+  &:hover{
+    background: #fafafa;
+    color: $primary-color;
+  }
+}
+//unsubsribe btn
+.unsub-btn{
+  background: none;
+  color: grey; 
+  &:hover{
+    background: none;
+    color: #3f3f3f; 
+  }
+}

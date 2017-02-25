@@ -1,0 +1,52 @@
+/* navbar */
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 0px; 
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.navbar-default .navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: $primary-color;
+  font-size: 2.3em; 
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: $primary-color; 
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+      color: $primary-color;
+      &:hover{
+      color: $primary-color;
+      font-weight:bold;
+      }
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    &:hover{
+      background-color: transparent; 
+    }
+    &:focus{
+      background-color: transparent; 
+    }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    color: $primary-color;
+}
+
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+    margin-right: 0px; 
+    margin-left: 0px; 
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: $primary-color;
+    background-color: transparent;
+    border:none;
+}

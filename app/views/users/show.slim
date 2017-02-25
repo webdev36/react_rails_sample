@@ -1,0 +1,30 @@
+.banner-flex
+  .image
+    img.img-responsive alt=("avatar") height="100" src="#{@user.image_url}" width="100" /
+  .user-info
+    h2.name= @user.name
+    h5.username= "@#{@user.username}"
+  .stats
+    -if current_user
+      h4.subscribers= "#{@user.followers.size} subscribers"
+      - if current_user != @user
+        a.btn.follow-btn href="/users/toggle-following/#{@user.id}" rel="nofollow" 
+          - if current_user.following?(@user)
+            | Unsubscribe
+          - else
+            | Subscribe
+    -else
+      h4.subscribers= "#{@user.followers.size} subscribers"
+      a.btn.follow-btn href="/sign_in" rel="nofollow" Subscribe
+
+.user-events-flex
+  .grid-title
+    h3= "Events added by #{@user.name}"
+  .item-grid-flex
+    - @user.events.order('scheduled_at DESC').each do |event|
+      .flex-item
+        a href="/events/#{event.id}-#{event.slug}" 
+          h2= event.title
+        p= event.caption
+        - if event.user == current_user
+          a href="/events/#{event.id}-#{event.slug}/edit" Edit

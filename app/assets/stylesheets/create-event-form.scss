@@ -1,0 +1,49 @@
+.form-wrap{
+  display: flex; 
+}
+#create-event-form .form-group{
+margin-bottom: 25px; 
+}
+
+#form-field{
+  box-shadow: none;
+  padding: 10px;
+  border: 2px solid #f1f1f1;
+  background: #fff;
+}
+
+#form-field input{
+  box-shadow: none;
+  border-bottom: 2px solid #d3d3d3;
+  margin-bottom: 12px; 
+  padding: 10px;
+  background: #fff;
+}
+
+input#title.form-control{
+  border: none; 
+  border-bottom: 1px solid $primary-color;
+}
+input#caption.form-control{
+  border: none; 
+  border-bottom: 1px solid $primary-color;
+}
+input#link.form-control{
+  border: none; 
+  border-bottom: 1px solid $primary-color;
+}
+
+label{
+  color: $primary-color; 
+}
+
+.submit-event-btn{
+  border: 1px solid $primary-color;
+  color: #fff;
+  background: $primary-color;
+
+  &:hover{
+  background: #fff;
+  color: $primary-color;
+  }
+}

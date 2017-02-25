@@ -1,0 +1,58 @@
+<center data-parsed=""> <img src="http://placehold.it/120/663399" alt="" align="center" class="float-center"> </center>
+<table class="spacer">
+  <tbody>
+    <tr>
+      <td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td>
+    </tr>
+  </tbody>
+</table>
+<table class="row">
+  <tbody>
+    <tr>
+      <th class="small-12 large-12 columns first last">
+        <table>
+          <tr>
+            <th>
+              <h4 class="text-center"><%= @event.title %></h4>
+              <p class="text-center"><%= @event.scheduled_at.to_formatted_s(:rfc822) %></p>
+            </th>
+            <th class="expander"></th>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<table class="row">
+  <tbody>
+    <tr>
+      <th class="small-12 large-12 columns first last">
+        <table>
+          <tr>
+            <th>
+              <p class="text-center">
+                Hello, you're subscribed to <%= @event.title %> and it's starting
+                very soon at <%= @event.scheduled_at.to_formatted_s(:rfc822) %>!
+              </p>
+              <center data-parsed="">
+                <table class="button success float-center">
+                  <tr>
+                    <td>
+                      <table>
+                        <tr>
+                          <td><a href="<%= @event.link %>">Go to event now! &rarrtl;</a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+            </th>
+            <th class="expander"></th>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,111 @@
+@import "variables.scss";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap-datetimepicker';
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+@import "common.scss";
+@import "events.scss";
+@import "navbar.scss";
+@import "flatpickr.scss";
+@import "create-event-form";
+@import "user.scss";
+@import "switches.scss";
+@import "flipclock.scss"; 
+@import "login.scss";
+@import "social-share-button";
+@import "social-share"; 
+
+.about-layout{
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px; 
+  word-wrap: break-word;
+}
+
+.about-page{
+}
+
+#home {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+  padding:70px;
+  height:500px; 
+  background-color: #F50057;
+  .tagline{
+    color: #fff; 
+    font-size: 100px; 
+  }
+}
+  .tag-sub{
+    color: #fff; 
+    font-size: 1.7em; 
+  }
+#viewers {padding:70px;height:500px;
+  background-color: #1E88E5;
+  color: #fff;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+  a{
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px; 
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+}
+
+#how-to {padding:70px;height:500px;color: #fff; 
+  background-color: #673ab7;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+  li{
+    font-size: 30px; 
+  }
+  a{
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px; 
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+}
+#creators {padding:70px;height:500px;
+  color: #fff; background-color: #00bcd4;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+  a{
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px; 
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+}
+#discover {padding:70px;height:500px;
+  color: #fff;  background-color: #ff9800;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+  .discover{
+    font-size: 80px; 
+  }
+  a{
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px; 
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+}

@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title Skedge
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+    nav style='margin-bottom: 10px;'
+      nav.navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+              button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand href="/home" Skedge
+            #navbar.navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li 
+                  a href="/about" About
+              ul.nav.navbar-nav.navbar-right
+                - if current_user 
+                  li
+                    a href="/events/new" 
+                      | Add event
+                      span.sr-only (current)
+                  li
+                    a href="/users/#{current_user.id}-#{current_user.username}" My Profile    
+                  li
+                    a href="/users/logout"  Log out
+                - else 
+                  li
+                    a href="#" data-toggle="modal" data-target="#loginModal"
+                      | Add event
+                      span.sr-only (current)
+                  li
+                    a href="#" data-toggle="modal" data-target="#loginModal" Log in
+                  
+  .container style="padding-top: 23px;"
+      = yield
+      = render 'shared/login_modal'
+      = javascript_include_tag *webpack_asset_paths('application')

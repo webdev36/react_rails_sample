@@ -1,0 +1,41 @@
+.show-flex
+  div.title-and-image-show
+    h1= @event.title
+
+    p.caption= @event.caption
+
+    img.img-responsive alt=("https://i.imgur.com/v2LRqcV.jpg") height="100" src="#{@event.user.image_url}" width="100" /
+    br
+    p added by
+    a href="#{user_path(@event.user.id, @event.user.username)}"= @event.user.name
+
+  - if @event.scheduled_at > Time.now
+    div.countdown-show
+      #eventCountdown data-component="EventCountdown" data-react-props="#{@scheduled_at}"
+    
+    div
+      br
+      - if current_user
+        a href="/events/toggle_subscription/#{@event.id}" rel="nofollow" 
+          - if current_user.subscriptions.where(event: @event).any?
+            .btn.unsub-btn
+              | Awesome! We'll let you know when it's going down. 
+          - else
+            .btn.sub-btn
+              h4
+                | Remind me
+      - else
+        a.btn.follow-btn href="/sign_in" rel="nofollow" Remind me
+    a.btn#visit-btn href="#{@event.link}" target="_blank" Visit event
+  - else
+    br
+    p This event already started. 
+    br
+    a href="#{@event.link}" target="_blank" Check out what happened!
+  
+  p Share this event
+  = social_share_button_tag(@event.title)
+  div.sub-size-show
+    p= @event.subscriptions.size
+    p Subcribed to this event
+
