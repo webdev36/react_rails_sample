@@ -11,7 +11,6 @@ module Skedge
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
     config.o_auth_providers = %w(twitter)
     config.autoload_once_paths += %W(#{config.root}/lib)
     config.assets.precompile += %w(about.scss )
