@@ -42,6 +42,9 @@ class Api::V1::EventsController < Api::V1::BaseController
                                                  :link,
                                                  :scheduled_at)
     unless event_params[:scheduled_at].blank?
+      p ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      p Chronic.parse(event_params[:scheduled_at])
+      p Chronic.parse(event_params[:scheduled_at]).utc
       event_params[:scheduled_at] = Chronic.parse(event_params[:scheduled_at]).utc
     end
 

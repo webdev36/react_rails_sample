@@ -17,6 +17,9 @@ export default class EventCountdown extends Component {
     let utcMin = now.getUTCMinutes()
     let utcSec = now.getUTCSeconds()
 
+    console.log(now)
+    console.log(new Date(utcYear, utcMonth, utcDate, utcHour, utcMin, utcSec))
+
     let utcTimeNow = new Date(utcYear, utcMonth, utcDate, utcHour, utcMin, utcSec).getTime() / 1000
     let startingTime = moment(scheduled_at).unix()
 
