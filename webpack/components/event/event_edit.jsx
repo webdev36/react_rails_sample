@@ -12,13 +12,20 @@ export default class EventEdit extends Component {
   editEvent = (e) => {
     this.setState({ errors: {} })
 
-    alert('editEvent')
+    let scheduledLocal = new Date(this.refs.scheduledAt.value)
+    let utcYear = scheduledLocal.getUTCFullYear()
+    let utcMonth = scheduledLocal.getUTCMonth()
+    let utcDate = scheduledLocal.getUTCDate()
+    let utcHour = scheduledLocal.getUTCHours()
+    let utcMin = scheduledLocal.getUTCMinutes()
+    let utcSec = scheduledLocal.getUTCSeconds()
+    let scheduledLocalUtc = new Date(utcYear, utcMonth, utcDate, utcHour, utcMin, utcSec)
 
     let params = {
       title: this.refs.title.value,
       caption: this.refs.caption.value,
       link: this.refs.link.value,
-      scheduled_at: this.refs.scheduledAt.value
+      scheduled_at: scheduledLocalUtc.toISOString()
     }
 
     let self = this
