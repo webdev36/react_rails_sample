@@ -11,6 +11,9 @@ export default class EventEdit extends Component {
 
   editEvent = (e) => {
     this.setState({ errors: {} })
+
+    alert('editEvent')
+
     let params = {
       title: this.refs.title.value,
       caption: this.refs.caption.value,
@@ -38,7 +41,7 @@ export default class EventEdit extends Component {
 
   componentDidMount = () => {
     new Flatpickr(this.refs.scheduledAt, {
-      utc: true,
+      utc: false,
       minDate: new Date(),
       enableTime: true,
       altInput: true,
