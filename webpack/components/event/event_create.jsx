@@ -11,6 +11,9 @@ export default class EventCreate extends Component {
 
   createEvent = (e) => {
     this.setState({ errors: {} })
+    let scheduledUTC = this.refs.scheduledAt.value
+    console.log('createEvent')
+    console.log(scheduledUTC);
     let params = {
       title: this.refs.title.value,
       caption: this.refs.caption.value,
@@ -31,7 +34,7 @@ export default class EventCreate extends Component {
 
   componentDidMount = () => {
     new Flatpickr(this.refs.scheduledAt, {
-      utc: false,
+      utc: true,
       minDate: new Date(),
       enableTime: true,
       altInput: true,
