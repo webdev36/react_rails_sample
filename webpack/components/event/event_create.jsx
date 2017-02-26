@@ -71,7 +71,7 @@ export default class EventCreate extends Component {
                 { this.state.errors['link'] && <FormError text={this.state.errors['link'][0]} /> }
                 </div>
                 <div className="form-group" id="form-field">
-                  <label htmlFor="scheduledAt">When is it? (GMT)</label>
+                  <label htmlFor="scheduledAt">When is it?</label>
                   <input ref="scheduledAt" required type='text' className="form-control" placeholder="Click to toggle scheduler" id="scheduledAt"/>
                   { this.state.errors['scheduled_at'] && <FormError text={this.state.errors['scheduled_at'][0]} /> }
                   </div>
