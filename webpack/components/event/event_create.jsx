@@ -25,7 +25,7 @@ export default class EventCreate extends Component {
       title: this.refs.title.value,
       caption: this.refs.caption.value,
       link: this.refs.link.value,
-      scheduled_at: this.refs.scheduledAt.value
+      scheduled_at: scheduledLocalUtc.toISOString()
     }
 
     let self = this
