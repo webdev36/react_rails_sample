@@ -45,7 +45,7 @@ class Api::V1::EventsController < Api::V1::BaseController
       p ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
       p Chronic.parse(event_params[:scheduled_at])
       p Chronic.parse(event_params[:scheduled_at]).utc
-      event_params[:scheduled_at] = Chronic.parse(event_params[:scheduled_at]).utc
+      event_params[:scheduled_at] = Chronic.parse(event_params[:scheduled_at])
     end
 
     event_params

@@ -31,10 +31,11 @@ export default class EventCreate extends Component {
 
   componentDidMount = () => {
     new Flatpickr(this.refs.scheduledAt, {
+      utc: false,
       minDate: new Date(),
       enableTime: true,
       altInput: true,
-      altFormat: "F j, Y h:i K", 
+      altFormat: "F j, Y h:i K",
       onChange: function(dateObject) { console.log(dateObject) }
     });
   }

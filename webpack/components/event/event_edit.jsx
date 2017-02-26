@@ -38,6 +38,7 @@ export default class EventEdit extends Component {
 
   componentDidMount = () => {
     new Flatpickr(this.refs.scheduledAt, {
+      utc: false,
       minDate: new Date(),
       enableTime: true,
       altInput: true,
