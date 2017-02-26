@@ -20,7 +20,7 @@ class Event < ApplicationRecord
   has_many :subscriptions
 
   validates :title, :scheduled_at, :link, :user, presence: true
-  validate :scheduled_at_not_in_past
+  #validate :scheduled_at_not_in_past
 
   validates :title, length: {maximum: 40}
   validates :caption, length: {maximum: 100}
