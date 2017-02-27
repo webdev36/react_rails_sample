@@ -10,9 +10,9 @@
     a href="#{user_path(@event.user.id, @event.user.username)}"= @event.user.name
     
     p "#{@event.scheduled_at}"
-    p "#{Time.now}"
+    p "#{Time.now.utc}"
 
-  - if @event.scheduled_at > Time.now
+  - if @event.scheduled_at > Time.now.utc
     
     div.countdown-show
       #eventCountdown data-component="EventCountdown" data-react-props="#{@scheduled_at}"
