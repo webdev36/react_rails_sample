@@ -8,8 +8,12 @@
     br
     p added by
     a href="#{user_path(@event.user.id, @event.user.username)}"= @event.user.name
+    
+    p "#{@event.scheduled_at}"
+    p "#{Time.now}"
 
   - if @event.scheduled_at > Time.now
+    
     div.countdown-show
       #eventCountdown data-component="EventCountdown" data-react-props="#{@scheduled_at}"
     
@@ -38,4 +42,3 @@
   div.sub-size-show
     p= @event.subscriptions.size
     p Subcribed to this event
-
